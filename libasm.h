@@ -5,6 +5,7 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 # include <sys/types.h>
+# include <sys/uio.h>
 # include <stdlib.h>
 
 

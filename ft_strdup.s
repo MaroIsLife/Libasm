@@ -2,21 +2,18 @@ section .text
         global _ft_strdup
 
 _ft_strdup:
-        mov rdx,0                   ; i = 0;
+        mov rdx,0
         jmp count
 
 count:
-    cmp rdi,0          ;str[i] == 0
-    je error_null
-    cmp byte [rdi + rdx],0
+    cmp byte [rdi + rdx],0     
     jnz count_incr
     inc rdx
     jmp alloc
 
-
 count_incr:
-    inc rdx
-    jmp count
+    inc rdx     ; i++;
+    jmp count   ; goto count
 
 error_null:
     mov rax,0
